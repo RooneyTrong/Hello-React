@@ -36,3 +36,275 @@
     transform: rotate(360deg);
   }
 }
+.content {
+  margin-top: 16px;
+  padding: 12px 8px;
+  border: 1px solid #606060;
+  background-color: #bbbbbb;
+  box-shadow: 4px 6px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.content img {
+  margin-top: 12px;
+}
+.link {
+  margin-left: 24px;
+}
+
+.login-button {
+  width: 100px;
+  height: 60px;
+  background-color: lightcoral;
+}
+.register-button {
+  width: 100px;
+  height: 40px;
+  background-color: lightblue;
+}
+.bg-image {
+  width: 100%;
+  height: 200px;
+  background-image: url("https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/106509/01/sv03/fnd/PNA/fmt/png/Future-Z-4.2-TT-Soccer-Cleats-JR");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.bg-gradient {
+  width: 100%;
+  height: 200px;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    red 0%,
+    blue 33%,
+    green 67%,
+    yellow 100%
+  );
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  width: 100%;
+  height: 56px;
+  background-color: darkcyan;
+  z-index: 99;
+}
+.header-logo {
+  display: flex;
+}
+.header-logo > h3 {
+  display: none;
+  margin-right: 16px;
+}
+.footer {
+  padding: 24px;
+  text-align: center;
+  background-color: cadetblue;
+}
+.main {
+  padding-top: 56px;
+  flex: 1;
+  background-color: #566969;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.nav-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+.iconShopping {
+  position: absolute;
+  right: 200px;
+  cursor: pointer;
+  z-index: 1;
+  bottom: 20px;
+}
+.iconShopping i {
+  position: absolute;
+  font-size: 1.7rem;
+  bottom: -22px;
+}
+.iconShopping p {
+  color: red;
+  position: fixed;
+  top: 7px;
+  border-radius: 50%;
+  background-color: cadetblue;
+}
+
+.nav-link-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 100%;
+}
+.nav-link-item:hover {
+  background-color: red;
+  transition: all 1s;
+}
+.sub-nav {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  display: none;
+  width: 150px;
+  background-color: red;
+  z-index: 1;
+}
+.nav-link-item:hover .sub-nav {
+  display: block;
+}
+.sub-nav-item {
+  padding: 8px;
+}
+.sub-nav-item:hover {
+  background-color: yellow;
+}
+
+/* list */
+.list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+.list-filter {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+}
+.list-container {
+  flex: 1;
+}
+.item-wrapper {
+  width: calc(100% / 3);
+  padding: 8px;
+}
+.item-card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+}
+.item-card:hover {
+  box-shadow: 4px 6px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+.card-image-wrapper {
+  position: relative;
+  padding-top: 133.3%;
+  width: 100%;
+  overflow: hidden;
+}
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/modern-gold-background-free-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.item-card-content {
+  padding: 8px;
+  background-color: white;
+}
+.item-sale {
+  position: absolute;
+  top: -55px;
+  left: -55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 4px 4px;
+  width: 100px;
+  background-color: red;
+  color: white;
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+.back-to-top {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.item-card:hover .card-image {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+/* Responsive */
+@media screen and (max-width: 1280px) {
+  .main {
+    background-color: red;
+  }
+  .item-wrapper {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    background-color: yellow;
+  }
+  .list-filter {
+    width: 100%;
+  }
+  .detail-description-container {
+    width: 100%;
+    order: 3;
+  }
+  .detail-specification-container {
+    width: 100%;
+    order: 2;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main {
+    background-color: green;
+  }
+  .item-wrapper {
+    width: 100%;
+  }
+  .detail-image {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  .nav-link {
+    display: none;
+  }
+  .header-logo > h3 {
+    display: block;
+  }
+}
